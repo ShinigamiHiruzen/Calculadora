@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*copyright © 2022 todos os direitos reservados a Eduardo de Andrade do Bomfim Junior*/
+/*copyright Â© 2022 todos os direitos reservados a Eduardo de Andrade do Bomfim Junior*/
 
 //CALCULADORA EM C
 
@@ -121,7 +121,7 @@ void divisao(){
 
 void equacao_segundograu(){
 	
-	float a=0, b=0, c=0, delta, x1, x2;
+	float a, b, c, delta, x1, x2;
 	
 	cabecalho_segundograu();
 	
@@ -139,13 +139,16 @@ void equacao_segundograu(){
 		delta = ((-b * -b)-4*a*c);
 		
 		printf("Delta: %.2f\n", delta);
+		if(delta>=0){
 		
 		x1 = (-b + sqrt(delta))/(2*a);
 		x2 = (-b - sqrt(delta))/(2*a);
 		
 		printf("O valor de x1: %.2f\n", x1);
 		printf("O valor de x2: %.2f\n", x2);
-		
+		}else{
+		printf("Delta eh negativo\n");
+		}
 	}else if(b == 0 || c ==0){
 		
 		printf("\nEquacao Incompleta\n");
